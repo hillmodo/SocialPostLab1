@@ -1,0 +1,11 @@
+<div class="page-body">
+    <header>#nowplaying</header>
+    <button class="new-post" (click)="show = !show"> New Post</button>
+    <div *ngIf="show === true">
+        <app-post-form [playlist]="playlist" (submitted)="onSubmit($event)"></app-post-form>
+    </div>
+    <app-post [playlist]="playlist"></app-post>
+
+</div>
+
+<router-outlet></router-outlet>
